@@ -103,6 +103,10 @@ button {
   padding: 24px 0;
   color: var(--primary-text-color);
 }
+.current {
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .current::after {
   position: absolute;
   bottom: -1px;
@@ -112,7 +116,7 @@ button {
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
-  color: #404bbf;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .current:hover::after {
@@ -601,7 +605,8 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
@@ -609,6 +614,10 @@ button {
 .icon-close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* .icon-close:hover,
+.icon-close:focus {
+  fill: #ffffff;
+} */
 .is-hidden {
   opacity: 0;
   pointer-events: none;
